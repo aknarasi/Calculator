@@ -22,24 +22,32 @@ public class Calculator // class for the methods used to do simple calculations 
 		return 0;
 	}
 	
-	public void add (int value) // method to perform addition using value parameter
+	public void add (int value) // method to perform addition using value parameter plus total
 	{
-		
+		total = total + value;
 	}
 	
-	public void subtract (int value) // method to do subtraction 
+	public void subtract (int value) // method for subtracting value from total
 	{
-		
+		total = total - value;
 	}
 	
-	public void multiply (int value) // method for multiplying 
+	public void multiply (int value) // method for multiplying total by value
 	{
-		
+		total = total * value;
 	}
 	
-	public void divide (int value) // method for dividing 
+	public void divide (int value) // method for dividing total by new value
 	{
+		if (value == 0)				// unless value is 0, then make total 0
+		{
+			total = 0;
+		}
 		
+		else
+		{
+			total = total / value;
+		}
 	}
 	
 	public String getHistory () // method for returning the history of past calculations
