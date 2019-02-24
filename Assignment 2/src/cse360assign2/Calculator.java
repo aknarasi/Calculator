@@ -10,6 +10,8 @@ package cse360assign2;
 public class Calculator // class for the methods used to do simple calculations and holds total 
 {
 
+	private String history = "";	// initialize private variable for history
+	
 	private String output = "";		// create string to keep track of the history of operations
 	
 	private int total;	// private variable holding total amount
@@ -21,7 +23,7 @@ public class Calculator // class for the methods used to do simple calculations 
 	
 	public int getTotal () // method used to obtain total value 
 	{
-		return 0;
+		return total;
 	}
 	
 	public void add (int value) // method to perform addition using value parameter plus total
@@ -62,7 +64,7 @@ public class Calculator // class for the methods used to do simple calculations 
 	
 	public String getHistory () // method for returning the history of past calculations
 	{
-		String history = "0" + output;	// make string history show all previous outputs
+		 history = "0" + output;	// make string history show all previous outputs
 		
 		return history;					// return the history
 	}
