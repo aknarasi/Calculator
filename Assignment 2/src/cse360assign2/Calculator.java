@@ -7,7 +7,7 @@
 package cse360assign2;
 
 
-public class Calculator // class for the methods used to do simple calculations and holds total 
+public class Calculator // class for the methods used to do simple calculations, holds total and history
 {
 
 	private String history = "";	// initialize private variable for history
@@ -30,14 +30,14 @@ public class Calculator // class for the methods used to do simple calculations 
 	{
 		total = total + value;	// update total with addition of value
 		
-		output = " + " + value;	// update the history by showing the addition plus the value
+		output = output + " + " + value;	// update the history by showing the addition plus the value
 	}
 	
 	public void subtract (int value) // method for subtracting value from total
 	{
 		total = total - value;	// update total with subtraction of value
 		
-		output = output + " - " + value; // update the history by showing the addition minus the value
+		output = output + " - " + value; // update the history by showing previous output minus the value
 	}
 	
 	public void multiply (int value) // method for multiplying total by value
